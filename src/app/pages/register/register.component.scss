@@ -1,0 +1,28 @@
+.card-wrapper{
+  width: 100%;
+  height: 100vh;
+  min-width: 250px;
+}
+
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+.card-config{
+  width: 100%;
+}
+
+.mat-card-wrap{
+  width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  *{
+    font-size: 10px;
+  }
+  .mat-card-wrap{
+    width: 70%;
+  }
+
+}

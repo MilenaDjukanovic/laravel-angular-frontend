@@ -1,0 +1,7 @@
+<div class="article-container">
+  <app-article-create class="create-article-container"></app-article-create>
+  <div fxFlexFill fxLayoutGap="10px grid" fxLayoutAlign="center center" class="view-article-card-container">
+    <app-article-view-card *ngFor="let articlesEl of this.articles"
+                           [article]="articlesEl"></app-article-view-card>
+  </div>
+</div>

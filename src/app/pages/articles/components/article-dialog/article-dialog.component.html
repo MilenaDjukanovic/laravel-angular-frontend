@@ -1,0 +1,18 @@
+<div>
+  <mat-form-field class="title-config">
+    <input type="text" matInput [(ngModel)]="data.article.title" [disabled]="this.data.type === 'view'">
+  </mat-form-field>
+  <div mat-dialog-content>
+    <mat-form-field>
+      <textarea matInput rows="15"
+                [disabled]="this.data.type === 'view'">{{this.data.article.body}}</textarea>
+    </mat-form-field>
+    <mat-label class="author-config">Author: {{this.data.article.user_id}}</mat-label>
+  </div>
+  <div mat-dialog-actions class="button-container">
+    <button mat-flat-button (click)="onNoClick()">Close</button>
+    <button mat-flat-button color="primary" [mat-dialog-close]="this.data.article"
+            *ngIf="this.data.type !== 'view'">Edit
+    </button>
+  </div>
+</div>

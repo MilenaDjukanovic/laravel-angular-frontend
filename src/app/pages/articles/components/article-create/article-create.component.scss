@@ -1,0 +1,29 @@
+.card-wrapper{
+  width: 100%;
+  height: 100%;
+  min-width: 250px;
+  margin-top: 50px;
+}
+
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+.card-config{
+  width: 100%;
+}
+
+.mat-card-wrap{
+  width: 90%;
+}
+
+.title-config{
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  *{
+    font-size: 14px;
+  }
+}
