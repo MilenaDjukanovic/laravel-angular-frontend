@@ -23,4 +23,8 @@ export class ArticleComponent implements OnInit {
       this.articles = response.data;
     });
   }
+
+  public articleListChanged(): void {
+      this.getArticlesForUser();
+  }
 }

@@ -5,7 +5,7 @@
       <form [formGroup]="this.registerForm" >
         <p>
           <mat-form-field class="card-config">
-            <input type="text" matInput placeholder="First and last name" formControlName="firstAndLastName">
+            <input type="text" matInput placeholder="First and last name" formControlName="name">
           </mat-form-field>
         </p>
 
@@ -22,7 +22,7 @@
         </p>
 
         <div class="button">
-          <button class="float-right" type="submit" mat-flat-button color="primary">Register</button>
+          <button class="float-right" type="submit" mat-flat-button color="primary" (click)="this.onRegister()">Register</button>
         </div>
       </form>
     </mat-card-content>

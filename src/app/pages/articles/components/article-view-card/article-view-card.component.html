@@ -1,12 +1,14 @@
 <div fxLayout="row" class="card-container">
   <mat-card class="card-config">
-    <mat-card-title>{{this.article.title}}</mat-card-title>
-    <mat-card-subtitle>{{this.article.user_id}}</mat-card-subtitle>
+    <mat-card-title class="title-config"
+                    matTooltip="{{this.article.title}}"
+                    matTooltipPosition="above">{{this.article.title}}</mat-card-title>
+    <mat-card-subtitle>{{this.user.name}}</mat-card-subtitle>
     <div>
       <mat-card-actions fxFlexFill fxLayoutGap="5px grid" fxLayoutAlign="center center">
-        <button mat-flat-button class="button-config" color="primary" (click)="openDialog('view')">View</button>
-        <button mat-flat-button class="button-config" color="primary" (click)="openDialog('edit')">Edit</button>
-        <button mat-flat-button class="button-config" color="primary">Delete</button>
+        <button mat-flat-button class="button-config" color="primary" (click)="openDialog(true)">View</button>
+        <button mat-flat-button class="button-config" color="primary" (click)="openDialog(false)">Edit</button>
+        <button mat-flat-button class="button-config" color="primary" (click)="onDelete()">Delete</button>
       </mat-card-actions>
     </div>
   </mat-card>

@@ -2,7 +2,7 @@
   <mat-card class="mat-card-wrap">
     <mat-card-title fxLayoutAlign="space-between center">Login</mat-card-title>
     <mat-card-content class="card-config">
-      <form [formGroup]="this.loginForm" >
+      <form [formGroup]="this.loginForm" (ngSubmit)="onSubmit()">
         <p>
           <mat-form-field class="card-config">
             <input type="email" matInput placeholder="Email" formControlName="email">
@@ -14,8 +14,10 @@
             <input type="password" matInput placeholder="Password" formControlName="password">
           </mat-form-field>
         </p>
-
-        <a href="" class="float-left register-text">Don't have an account yet? Register</a>
+        <mat-error *ngIf="this.error">
+          The username and password were not recognized
+        </mat-error>
+        <a class="float-left register-text" (click)="this.redirectToRegister()">Don't have an account yet? Register</a>
 
         <div class="button">
           <button class="float-right" type="submit" mat-flat-button color="primary" >Login</button>

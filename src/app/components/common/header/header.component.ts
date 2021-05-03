@@ -1,6 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {Router} from '@angular/router';
+import {AuthService} from '../../../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -24,20 +25,13 @@ import {Router} from '@angular/router';
 
 export class HeaderComponent implements OnInit {
 
-  public menuState = 'out';
-  public showSidenav = false;
-
-  constructor(private router: Router) { }
+  constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit(): void {
   }
 
-  public toggleNav(): void{
-    this.showSidenav = !this.showSidenav;
+  public logout(): void {
+    this.authService.logout();
+    this.router.navigate(['/login']);
   }
-
-  public toggleMenu =() => {
-  }
-
-
 }

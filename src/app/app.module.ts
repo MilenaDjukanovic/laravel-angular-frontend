@@ -18,10 +18,12 @@ import {MatListModule} from '@angular/material/list';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { ArticleDialogComponent } from './pages/articles/components/article-dialog/article-dialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
-import {FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RegisterComponent} from './pages/register/register.component';
 import {LoginComponent} from './pages/login/login.component';
 import {HttpClientModule} from '@angular/common/http';
+import { BasicLayoutComponent } from './layout/basic-layout/basic-layout.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import {HttpClientModule} from '@angular/common/http';
     ArticleComponent,
     ArticleDialogComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    BasicLayoutComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,8 @@ import {HttpClientModule} from '@angular/common/http';
     MatDialogModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

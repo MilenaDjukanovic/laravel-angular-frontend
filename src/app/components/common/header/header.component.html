@@ -13,7 +13,7 @@
           <mat-icon>article</mat-icon><span class="nav-caption">Articles</span>
         </a>
         <a mat-list-item routerLink="/logout" (click)="sidenav.toggle()">
-          <mat-icon>logout</mat-icon><span class="nav-caption">Logout</span>
+          <mat-icon>logout</mat-icon><span (click)="logout()" class="nav-caption">Logout</span>
         </a>
       </mat-nav-list>
     </mat-sidenav>

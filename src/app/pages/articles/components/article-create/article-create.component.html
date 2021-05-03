@@ -2,21 +2,21 @@
   <mat-card class="mat-card-wrap">
     <mat-card-content class="card-config">
       <mat-card-title class="title-config">Create article</mat-card-title>
-      <form>
+      <form [formGroup]="this.createArticleForm">
         <p>
           <mat-form-field class="card-config">
-            <input type="text" matInput placeholder="Article title">
+            <input type="text" matInput placeholder="Article title" formControlName="title">
           </mat-form-field>
         </p>
 
 
         <mat-form-field class="example-full-width card-config">
           <mat-label>Article text</mat-label>
-          <textarea matInput placeholder="Ex. This is a new..."></textarea>
+          <textarea matInput placeholder="Ex. This is a new..." formControlName="body"></textarea>
         </mat-form-field>
 
         <div class="button">
-          <button class="float-right" type="submit" mat-flat-button color="primary">Create</button>
+          <button class="float-right" type="submit" mat-flat-button color="primary" (click)="this.createArticle()">Create</button>
         </div>
       </form>
     </mat-card-content>

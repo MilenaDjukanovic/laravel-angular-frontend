@@ -17,6 +17,16 @@
   width: 50%;
 }
 
+.error-message{
+  color: red;
+  padding-bottom: 20px;
+}
+
+a:hover {
+  color: purple !important;
+  text-decoration: underline !important;
+}
+
 @media screen and (max-width: 600px) {
   *{
     font-size: 10px;
