@@ -24,6 +24,10 @@ export class RegisterComponent implements OnInit {
     });
   }
 
+  public redirectToLogin(): void {
+    this.router.navigate(['/login']);
+  }
+
   public onRegister(): void {
     if (this.registerForm.invalid) {
       return;
@@ -33,8 +37,15 @@ export class RegisterComponent implements OnInit {
     const email = this.registerForm.controls.email.value;
     const password = this.registerForm.controls.password.value;
 
-    this.authService.register(name, email, password).subscribe(() => {
-      this.router.navigate(['/login']);
+    this.authService.register(name, email, password).subscribe((response) => {
+      if (!response) {
+        alert('User cannot be created!');
+      }
+      if (response && response.errorMessage) {
+        alert(response.errorMessage);
+      } else {
+        this.router.navigate(['/login']);
+      }
     });
   }
 

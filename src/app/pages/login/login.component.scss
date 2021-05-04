@@ -2,6 +2,11 @@
   width: 100%;
   min-width: 250px;
   height: 100vh;
+  background-image: url("/assets/images/articles.jpg");
+  box-shadow:inset 0 0 0 2000px rgba(36, 27, 34, 0.3);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 :host {
@@ -32,7 +37,7 @@ a:hover {
     font-size: 10px;
   }
   .register-text{
-      font-size: 9px;
+      font-size: 7px;
   }
   .mat-card-wrap{
     width: 70%;

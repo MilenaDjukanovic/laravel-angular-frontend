@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit {
         },
         error => {
           this.error = error;
-          alert('Login data not valid!');
+          alert('Incorrect email or password!');
           this.loading = false;
         }
       );

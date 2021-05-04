@@ -1,7 +1,12 @@
-.card-wrapper{
+.card-wrapper {
   width: 100%;
   height: 100vh;
   min-width: 250px;
+  background-image: url("/assets/images/articles.jpg");
+  box-shadow:inset 0 0 0 2000px rgba(36, 27, 34, 0.3);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 :host {
@@ -9,20 +14,29 @@
   justify-content: center;
 }
 
-.card-config{
+.card-config {
   width: 100%;
 }
 
-.mat-card-wrap{
+.mat-card-wrap {
   width: 50%;
 }
 
+.login-text:hover {
+  text-decoration: underline !important;
+  color: #6c187f !important;
+}
+
 @media screen and (max-width: 600px) {
-  *{
+  * {
     font-size: 10px;
   }
-  .mat-card-wrap{
+  .mat-card-wrap {
     width: 70%;
+  }
+
+  .login-text {
+    font-size: 9px;
   }
 
 }

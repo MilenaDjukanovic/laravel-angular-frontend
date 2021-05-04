@@ -20,7 +20,7 @@
             <input type="password" matInput placeholder="Password" formControlName="password">
           </mat-form-field>
         </p>
-
+        <a class="float-left login-text" (click)="this.redirectToLogin()">Back to login</a>
         <div class="button">
           <button class="float-right" type="submit" mat-flat-button color="primary" (click)="this.onRegister()">Register</button>
         </div>
